@@ -58,7 +58,9 @@
 */
 
 #pragma once
-#include "olcPixelGameEngine.h"
+#include "..\olcPixelGameEngine.h"
+
+bool bHitToDoCode{ false };
 
 namespace olc::utils::geom2d
 {
@@ -483,6 +485,7 @@ namespace olc::utils::geom2d
 	inline std::vector<olc::v2d_generic<T2>> intersects(const triangle<T1>& r, const olc::v2d_generic<T2>& p)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return {};
 	}
 
@@ -512,6 +515,7 @@ namespace olc::utils::geom2d
 	inline constexpr bool contains(const line<T1>& l1, const line<T2>& l2)
 	{
 		// TODO: Check if segments are colinear, and l1 exists within bounds of l2
+		bHitToDoCode = true;
 		return false;
 	}
 
@@ -551,6 +555,7 @@ namespace olc::utils::geom2d
 	inline constexpr bool overlaps(const line<T1>& l1, const line<T2>& l2)
 	{
 		// TODO: 
+		bHitToDoCode = true;
 		return false;
 	}
 
@@ -562,6 +567,7 @@ namespace olc::utils::geom2d
 			|| contains(r, l.end);
 
 		// TODO: This method is no good, it cant detect lines whose start and end
+		bHitToDoCode = true;
 		// points are outside the rectangle
 	}
 
@@ -570,6 +576,7 @@ namespace olc::utils::geom2d
 	inline constexpr bool overlaps(const circle<T1>& c, const line<T2>& l)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return false;
 	}
 
@@ -580,6 +587,7 @@ namespace olc::utils::geom2d
 		return overlaps(t, l.start) || overlaps(t, l.end);
 
 		// TODO: This method is no good, it cant detect lines whose start and end
+		bHitToDoCode = true;
 		// points are outside the triangle
 	}
 
@@ -591,6 +599,7 @@ namespace olc::utils::geom2d
 	inline std::vector<olc::v2d_generic<T2>> intersects(const olc::v2d_generic<T1>& p, const line<T2>& l)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return {};
 	}
 
@@ -599,6 +608,7 @@ namespace olc::utils::geom2d
 	inline std::vector<olc::v2d_generic<T2>> intersects(const line<T1>& l1, const line<T2>& l2)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return {};
 	}
 
@@ -607,6 +617,7 @@ namespace olc::utils::geom2d
 	inline std::vector<olc::v2d_generic<T2>> intersects(const rect<T1>& r, const line<T2>& l)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return {};
 	}
 
@@ -615,6 +626,7 @@ namespace olc::utils::geom2d
 	inline std::vector<olc::v2d_generic<T2>> intersects(const circle<T1>& c, const line<T2>& l)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return {};
 	}
 
@@ -623,6 +635,7 @@ namespace olc::utils::geom2d
 	inline std::vector<olc::v2d_generic<T2>> intersects(const triangle<T1>& t, const line<T2>& l)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return {};
 	}
 
@@ -729,6 +742,7 @@ namespace olc::utils::geom2d
 			|| contains(t, olc::v2d_generic<T2>{ r.pos.x, r.pos.y + r.size.y });
 
 		// TODO: This method is no good, consider rectangle with all vertices
+		bHitToDoCode = true;
 		// outside of triangle, but edges still crossing
 	}
 
@@ -747,6 +761,7 @@ namespace olc::utils::geom2d
 	inline std::vector<olc::v2d_generic<T2>> intersects(const line<T1>& l, const rect<T2>& r)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return {};
 	}
 
@@ -755,6 +770,7 @@ namespace olc::utils::geom2d
 	inline std::vector<olc::v2d_generic<T2>> intersects(const rect<T1>& r1, const rect<T2>& r2)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return {};
 	}
 
@@ -763,6 +779,7 @@ namespace olc::utils::geom2d
 	inline std::vector<olc::v2d_generic<T2>> intersects(const circle<T1>& c, const rect<T2>& r)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return {};
 	}
 
@@ -808,6 +825,7 @@ namespace olc::utils::geom2d
 	inline constexpr bool contains(const rect<T1>& r, const circle<T2>& c)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return false;
 	}
 
@@ -823,6 +841,7 @@ namespace olc::utils::geom2d
 	inline constexpr bool contains(const triangle<T1>& t, const circle<T2>& c)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return false;
 	}
 
@@ -862,6 +881,7 @@ namespace olc::utils::geom2d
 	inline constexpr bool overlaps(const triangle<T1>& t, const circle<T2>& c)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return false;
 	}
 
@@ -873,6 +893,7 @@ namespace olc::utils::geom2d
 	inline std::vector<olc::v2d_generic<T2>> intersects(const olc::v2d_generic<T1>& p, const circle<T2>& c)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return {};
 	}
 
@@ -881,6 +902,7 @@ namespace olc::utils::geom2d
 	inline std::vector<olc::v2d_generic<T2>> intersects(const line<T1>& l, const circle<T2>& c)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return {};
 	}
 
@@ -889,6 +911,7 @@ namespace olc::utils::geom2d
 	inline std::vector<olc::v2d_generic<T2>> intersects(const rect<T1>& r, const circle<T2>& c)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return {};
 	}
 
@@ -897,6 +920,7 @@ namespace olc::utils::geom2d
 	inline std::vector<olc::v2d_generic<T2>> intersects(const circle<T1>& c1, const circle<T2>& c2)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return {};
 	}
 
@@ -905,6 +929,7 @@ namespace olc::utils::geom2d
 	inline std::vector<olc::v2d_generic<T2>> intersects(const triangle<T1>& t, const circle<T2>& c)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return {};
 	}
 
@@ -942,6 +967,7 @@ namespace olc::utils::geom2d
 	inline constexpr bool contains(const rect<T1>& r, const triangle<T2>& t)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return false;
 	}
 
@@ -950,6 +976,7 @@ namespace olc::utils::geom2d
 	inline constexpr bool contains(const circle<T1>& c, const triangle<T2>& t)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return false;
 	}
 
@@ -958,6 +985,7 @@ namespace olc::utils::geom2d
 	inline constexpr bool contains(const triangle<T1>& t1, const triangle<T2>& t2)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return false;
 	}
 
@@ -997,6 +1025,7 @@ namespace olc::utils::geom2d
 	inline constexpr bool overlaps(const triangle<T1>& t1, const triangle<T2>& t2)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return false;
 	}
 
@@ -1008,6 +1037,7 @@ namespace olc::utils::geom2d
 	inline std::vector<olc::v2d_generic<T2>> intersects(const olc::v2d_generic<T1>& p, const triangle<T2>& t)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return {};
 	}
 
@@ -1016,6 +1046,7 @@ namespace olc::utils::geom2d
 	inline std::vector<olc::v2d_generic<T2>> intersects(const line<T1>& l, const triangle<T2>& t)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return {};
 	}
 
@@ -1024,6 +1055,7 @@ namespace olc::utils::geom2d
 	inline std::vector<olc::v2d_generic<T2>> intersects(const rect<T1>& r, const triangle<T2>& t)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return {};
 	}
 
@@ -1032,6 +1064,7 @@ namespace olc::utils::geom2d
 	inline std::vector<olc::v2d_generic<T2>> intersects(const circle<T1>& c, const triangle<T2>& t)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return {};
 	}
 
@@ -1040,6 +1073,7 @@ namespace olc::utils::geom2d
 	inline std::vector<olc::v2d_generic<T2>> intersects(const triangle<T1>& t1, const triangle<T2>& t2)
 	{
 		// TODO:
+		bHitToDoCode = true;
 		return {};
 	}
 
